@@ -46,7 +46,7 @@ class NavBar extends Component {
                console.log(checkboxes[i].value);
             }
          }
-         window.location.replace('/');
+         window.location.reload();
       }
 
       return (
