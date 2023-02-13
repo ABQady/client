@@ -9,8 +9,8 @@ function ProductPage() {
 
    const [products, setProducts] = useState([]);
 
-   useEffect(() => {
-      Axios.get("https://server-abqady.vercel.app/get").then((response) => {
+   useEffect(async () => {
+      await Axios.get("https://server-abqady.vercel.app/get").then((response) => {
          setProducts(response.data)
       });
    }, [])
@@ -51,9 +51,6 @@ class NavBar extends Component {
                console.log(checkboxes[i].value);
             }
          }
-         // wait(2);
-         //window.location.href = '/';
-         //await timeout(1000); //for 1 sec delay
          window.location.reload(true);
       }
 
