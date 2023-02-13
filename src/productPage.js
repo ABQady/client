@@ -53,7 +53,7 @@ class NavBar extends Component {
             }
          }
          //await 
-         timeout(1000).then(window.location.reload());
+         //timeout(1000).then(window.location.reload());
       }
 
       return (
