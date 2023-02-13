@@ -42,7 +42,7 @@ class NavBar extends Component {
                console.log(checkboxes[i].value)
             }
          }
-         //window.location.href = '/';
+         window.location.href = '/';
       }
       return (
          <div>
