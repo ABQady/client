@@ -34,7 +34,11 @@ class NavBar extends Component {
 
    render() {
 
-      function deleteAll() {
+      async function deleteAll() {
+         function timeout(delay) {
+            return new Promise(res => setTimeout(res, delay));
+         }
+
          let checkboxes = document.getElementsByClassName('form-check-input');
 
          for (var i = 0; i < checkboxes.length; i++) {
@@ -46,7 +50,7 @@ class NavBar extends Component {
          }
          // wait(2);
          //window.location.href = '/';
-         wait(10000);
+         await timeout(1000); //for 1 sec delay
          window.location.reload(true);
       }
 
