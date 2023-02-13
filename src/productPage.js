@@ -53,7 +53,7 @@ class NavBar extends Component {
          }
          // wait(2);
          //window.location.href = '/';
-         await timeout(1000); //for 1 sec delay
+         //await timeout(1000); //for 1 sec delay
          window.location.reload(true);
       }
 
