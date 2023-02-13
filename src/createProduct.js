@@ -108,7 +108,6 @@ function CreateProduct() {
          } catch (e) {
             console.log(e);
          }
-         //await timeout(1000); //for 1 sec delay
       }
    }
 

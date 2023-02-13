@@ -1,10 +1,8 @@
 import Axios from 'axios';
 import React, { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom';
 import { Component } from 'react';
 import Product from './product';
 import Footer from './footer';
-import { wait } from '@testing-library/user-event/dist/utils';
 
 function ProductPage() {
 
@@ -35,9 +33,6 @@ class NavBar extends Component {
 
    render() {
       async function deleteAll() {
-         function timeout(delay) {
-            return new Promise(res => setTimeout(res, delay));
-         }
 
          let checkboxes = document.getElementsByClassName('form-check-input');
 
@@ -51,8 +46,6 @@ class NavBar extends Component {
                console.log(checkboxes[i].value);
             }
          }
-         // window.location.reload(true);
-         // navigate('/', { replace: true });
          window.location.replace('/');
       }
 
