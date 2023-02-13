@@ -100,8 +100,8 @@ function CreateProduct() {
       console.log(dimensions)
       if (validateForm()) {
          try {
-            const response = await Axios.post('https://server-abqady.vercel.app/create', { sku: sku, name: name, price: price, size: size, weight: weight, dimensions: dimensions, type: switcher });
-            navigate('/', { replace: true });
+            const response = await Axios.post('https://server-abqady.vercel.app/create', { sku: sku, name: name, price: price, size: size, weight: weight, dimensions: dimensions, type: switcher }).then(
+               navigate('/', { replace: true }));
          } catch (e) {
             console.log(e);
          }

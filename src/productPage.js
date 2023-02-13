@@ -44,7 +44,7 @@ class NavBar extends Component {
          for (var i = 0; i < checkboxes.length; i++) {
             if (checkboxes[i].checked == true) {
                try {
-                  const response = await Axios.post('https://server-abqady.vercel.app/delete', { SKU: checkboxes[i].value });
+                  const response = await Axios.post('https://server-abqady.vercel.app/delete', { SKU: checkboxes[i].value }).then(window.location.reload(true));
                } catch (e) {
 
                }
@@ -55,7 +55,6 @@ class NavBar extends Component {
          // wait(2);
          //window.location.href = '/';
          //await timeout(1000); //for 1 sec delay
-         window.location.reload(true);
       }
 
       return (
