@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react'
 import { Component } from 'react';
 import Product from './product';
 import Footer from './footer';
+import { wait } from '@testing-library/user-event/dist/utils';
 
 function ProductPage() {
 
@@ -42,6 +43,7 @@ class NavBar extends Component {
                console.log(checkboxes[i].value)
             }
          }
+         wait(2);
          window.location.href = '/';
       }
       return (
