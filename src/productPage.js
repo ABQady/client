@@ -1,5 +1,6 @@
 import Axios from 'axios';
 import React, { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom';
 import { Component } from 'react';
 import Product from './product';
 import Footer from './footer';
@@ -33,6 +34,7 @@ function ProductPage() {
 class NavBar extends Component {
 
    render() {
+      const navigate = useNavigate();
 
       async function deleteAll() {
          function timeout(delay) {
@@ -52,6 +54,7 @@ class NavBar extends Component {
             }
          }
          // window.location.reload(true);
+         navigate('/', { replace: true });
       }
 
       return (
