@@ -51,7 +51,7 @@ class NavBar extends Component {
                console.log(checkboxes[i].value);
             }
          }
-         window.location.reload(true);
+         // window.location.reload(true);
       }
 
       return (
