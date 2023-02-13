@@ -5,19 +5,21 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 //import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, BrowserRouter Routes, Route } from "react-router-dom";
 import ProductPage from './productPage'
 import CreateProduct from './createProduct';
 
 
 export default function App() {
   return (
-    <HashRouter>
+    // <HashRouter>
+    <BrowserRouter>
       <Routes>
         <Route exact path="/" element={<ProductPage />} />
         <Route path="/add-product" element={<CreateProduct />} />
       </Routes>
-    </HashRouter >
+    </BrowserRouter>
+    //</HashRouter >
   );
 }
 
