@@ -45,7 +45,7 @@ class NavBar extends Component {
                      //       products: this.state.products.filter(product => product.SKU !== checkboxes[i].value)
                      //    })
                      // );
-                     .then(setProducts(this.state.products.filter(product => product.SKU !== checkboxes[i].value)))
+                     .then(this.setProducts(this.state.products.filter(product => product.SKU !== checkboxes[i].value)))
                } catch (e) {
 
                }
