@@ -39,7 +39,7 @@ class NavBar extends Component {
 
          for (var i = 0; i < checkboxes.length; i++) {
             if (checkboxes[i].checked == true) {
-               Axios.post('https://server-abqady.vercel.app/delete/', { SKU: checkboxes[i].value });
+               Axios.post('https://server-abqady.vercel.app/delete', { SKU: checkboxes[i].value });
                console.log(checkboxes[i].value);
                wait(100);
             }
