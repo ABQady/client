@@ -13,9 +13,6 @@ import CreateProduct from './createProduct';
 
 
 export default function App() {
-  app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "index.html"));
-  });
   return (
     <HashRouter>
       <Routes>
