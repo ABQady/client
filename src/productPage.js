@@ -37,7 +37,7 @@ class NavBar extends Component {
          let checkboxes = document.getElementsByClassName('delete-checkbox');
 
          for (var i = 0; i < checkboxes.length; i++) {
-            if (checkboxes[i].checked == true) {
+            if (checkboxes[i].checked === true) {
                try {
                   const response = await Axios.post('https://server-abqady.vercel.app/delete', { SKU: checkboxes[i].value });
                } catch (e) {
