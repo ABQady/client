@@ -1,4 +1,3 @@
-import React, { useEffect } from 'react'
 import { Component } from 'react';
 
 class Product extends Component {

@@ -1,10 +1,8 @@
 import Axios from 'axios';
 import React, { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
 import { Component } from 'react';
 import Product from './product';
 import Footer from './footer';
-import { Button } from 'bootstrap';
 
 function ProductPage() {
 
