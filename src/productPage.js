@@ -47,7 +47,7 @@ class NavBar extends Component {
          // wait(2);
          //window.location.href = '/';
          wait(1000);
-         window.location.reload(true);
+         //window.location.reload(true);
       }
 
       return (
