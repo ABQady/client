@@ -99,9 +99,13 @@ function CreateProduct() {
       setDimensions(dim);
       console.log(dimensions)
       if (validateForm()) {
-         Axios.post('https://server-abqady.vercel.app/create', { sku: sku, name: name, price: price, size: size, weight: weight, dimensions: dimensions, type: switcher });
-         await timeout(1000); //for 1 sec delay
-         navigate('/', { replace: true });
+         try {
+            const response = await Axios.post('https://server-abqady.vercel.app/create', { sku: sku, name: name, price: price, size: size, weight: weight, dimensions: dimensions, type: switcher });
+            navigate('/', { replace: true });
+         } catch (e) {
+            console.log(e);
+         }
+         //await timeout(1000); //for 1 sec delay
       }
    }
 
@@ -135,7 +139,7 @@ function CreateProduct() {
                <div className='d-flex justify-content-end col-6 my-auto'>
                   <button
                      onClick={() => {
-                        addProduct();
+                        addProduct().then(console.log('done'));
                      }}
                      className='btn btn-outline-primary me-3'> Save</button>
                   <a href='/' className="btn btn-outline-primary me-3"> Cancel</a>
