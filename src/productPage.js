@@ -32,6 +32,10 @@ function ProductPage() {
 class NavBar extends Component {
 
    render() {
+      async function timeout(delay) {
+         return new Promise(res => setTimeout(res, delay));
+      }
+
       async function deleteAll() {
 
          let checkboxes = document.getElementsByClassName('delete-checkbox');
