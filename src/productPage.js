@@ -32,8 +32,9 @@ function ProductPage() {
 
 class NavBar extends Component {
 
-   deleteAll = async () => {
-      {
+   render() {
+
+      async function deleteAll() {
          let checkboxes = document.getElementsByClassName('form-check-input');
 
          for (var i = 0; i < checkboxes.length; i++) {
@@ -45,8 +46,7 @@ class NavBar extends Component {
          // wait(2);
          window.location.href = '/';
       }
-   }
-   render() {
+
       return (
          <div>
             <div className='d-flex flex-row pt-5'>
