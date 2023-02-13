@@ -47,23 +47,25 @@ class NavBar extends Component {
             // wait(2);
             window.location.href = '/';
          }
-         return (
-            <div>
-               <div className='d-flex flex-row pt-5'>
-                  <div className='col-6 my-auto'>
-                     <h1 className='ps-3'>Product List</h1>
-                  </div>
-                  <div className='d-flex justify-content-end col-6 my-auto'>
-                     <a href='/add-product' className='btn btn-outline-primary me-3'> ADD</a>
-                     <button onClick={deleteAll} className="btn btn-outline-primary me-3 delete-checkbox"> MASS DELETE</button>
-                  </div>
-               </div>
-               <div>
-                  <hr className='m-3'></hr>
-               </div>
-            </div >
-         );
       }
+
+      return (
+         <div>
+            <div className='d-flex flex-row pt-5'>
+               <div className='col-6 my-auto'>
+                  <h1 className='ps-3'>Product List</h1>
+               </div>
+               <div className='d-flex justify-content-end col-6 my-auto'>
+                  <a href='/add-product' className='btn btn-outline-primary me-3'> ADD</a>
+                  <button onClick={deleteAll} className="btn btn-outline-primary me-3 delete-checkbox"> MASS DELETE</button>
+               </div>
+            </div>
+            <div>
+               <hr className='m-3'></hr>
+            </div>
+         </div >
+      );
    }
+}
 
 export default ProductPage;
