@@ -9,7 +9,7 @@ function ProductPage() {
    const [products, setProducts] = useState([]);
 
    useEffect(() => {
-      Axios.get("https://server-abqady.vercel.app/api/get").then((response) => {
+      Axios.get("https://server-abqady.vercel.app/get").then((response) => {
          setProducts(response.data)
       });
    }, [])
@@ -38,7 +38,7 @@ class NavBar extends Component {
 
          for (var i = 0; i < checkboxes.length; i++) {
             if (checkboxes[i].checked == true) {
-               Axios.post('https://server-abqady.vercel.app/api/delete/', { SKU: checkboxes[i].value });
+               Axios.post('https://server-abqady.vercel.app/delete/', { SKU: checkboxes[i].value });
                console.log(checkboxes[i].value)
             }
          }
