@@ -36,16 +36,14 @@ class NavBar extends Component {
          return new Promise(res => setTimeout(res, delay));
       }
 
-      //async 
-      function deleteAll() {
+      async function deleteAll() {
 
          let checkboxes = document.getElementsByClassName('delete-checkbox');
 
          for (var i = 0; i < checkboxes.length; i++) {
             if (checkboxes[i].checked === true) {
                try {
-                  //await 
-                  Axios.post('https://server-abqady.vercel.app/delete', { SKU: checkboxes[i].value });
+                  await Axios.post('https://server-abqady.vercel.app/delete', { SKU: checkboxes[i].value });
                } catch (e) {
 
                }
