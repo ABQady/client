@@ -86,7 +86,12 @@ function CreateProduct() {
       else return true;
 
    }
+   async function timeout(delay) {
+      return new Promise(res => setTimeout(res, delay));
+   }
+
    const navigate = useNavigate();
+
    async function addProduct() {
       var dim = height + "x" + width + "x" + length;
 
@@ -94,7 +99,8 @@ function CreateProduct() {
       setDimensions(dim);
       console.log(dimensions)
       if (validateForm()) {
-         await Axios.post('https://server-abqady.vercel.app/create', { sku: sku, name: name, price: price, size: size, weight: weight, dimensions: dimensions, type: switcher });
+         Axios.post('https://server-abqady.vercel.app/create', { sku: sku, name: name, price: price, size: size, weight: weight, dimensions: dimensions, type: switcher });
+         await timeout(1000); //for 1 sec delay
          navigate('/', { replace: true });
       }
    }
