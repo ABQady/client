@@ -32,10 +32,6 @@ function ProductPage() {
 class NavBar extends Component {
 
    render() {
-      async function timeout(delay) {
-         return new Promise(res => setTimeout(res, delay));
-      }
-
       async function deleteAll() {
 
          let checkboxes = document.getElementsByClassName('delete-checkbox');
@@ -50,8 +46,7 @@ class NavBar extends Component {
                console.log(checkboxes[i].value);
             }
          }
-         //await 
-         //timeout(1000).then(window.location.reload());
+         window.location.reload();
       }
 
       return (
