@@ -34,8 +34,6 @@ function ProductPage() {
 class NavBar extends Component {
 
    render() {
-      const navigate = useNavigate();
-
       async function deleteAll() {
          function timeout(delay) {
             return new Promise(res => setTimeout(res, delay));
@@ -54,7 +52,8 @@ class NavBar extends Component {
             }
          }
          // window.location.reload(true);
-         navigate('/', { replace: true });
+         // navigate('/', { replace: true });
+         window.location.replace('/');
       }
 
       return (
