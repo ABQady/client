@@ -32,23 +32,21 @@ function ProductPage() {
 
 class NavBar extends Component {
 
-   render() {
+   deleteAll = async () => {
+      {
+         let checkboxes = document.getElementsByClassName('form-check-input');
 
-      deleteAll = async () => {
-         {
-            let checkboxes = document.getElementsByClassName('form-check-input');
-
-            for (var i = 0; i < checkboxes.length; i++) {
-               if (checkboxes[i].checked == true) {
-                  await Axios.post('https://server-abqady.vercel.app/delete', { SKU: checkboxes[i].value });
-                  console.log(checkboxes[i].value);
-               }
+         for (var i = 0; i < checkboxes.length; i++) {
+            if (checkboxes[i].checked == true) {
+               await Axios.post('https://server-abqady.vercel.app/delete', { SKU: checkboxes[i].value });
+               console.log(checkboxes[i].value);
             }
-            // wait(2);
-            window.location.href = '/';
          }
+         // wait(2);
+         window.location.href = '/';
       }
-
+   }
+   render() {
       return (
          <div>
             <div className='d-flex flex-row pt-5'>
