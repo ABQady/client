@@ -34,7 +34,7 @@ class NavBar extends Component {
    render() {
       async function deleteAll() {
 
-         let checkboxes = document.getElementsByClassName('form-check-input');
+         let checkboxes = document.getElementsByClassName('delete-checkbox');
 
          for (var i = 0; i < checkboxes.length; i++) {
             if (checkboxes[i].checked == true) {
