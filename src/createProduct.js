@@ -94,7 +94,7 @@ function CreateProduct() {
       setDimensions(dim);
       console.log(dimensions)
       if (validateForm()) {
-         Axios.post('http://localhost:3002/api/create', { sku: sku, name: name, price: price, size: size, weight: weight, dimensions: dimensions, type: switcher });
+         Axios.post('https://server-abqady.vercel.app/api/create', { sku: sku, name: name, price: price, size: size, weight: weight, dimensions: dimensions, type: switcher });
          navigate('/', { replace: true });
       }
    }
