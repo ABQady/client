@@ -40,11 +40,12 @@ class NavBar extends Component {
             if (checkboxes[i].checked === true) {
                try {
                   await Axios.post('https://server-abqady.vercel.app/delete', { SKU: checkboxes[i].value })
-                  // .then(
-                  //    this.setState({
-                  //       products: this.state.products.filter(product => product.SKU !== checkboxes[i].value)
-                  //    })
-                  // );
+                     // .then(
+                     //    this.setState({
+                     //       products: this.state.products.filter(product => product.SKU !== checkboxes[i].value)
+                     //    })
+                     // );
+                     .then(setProducts(this.state.products.filter(product => product.SKU !== checkboxes[i].value)))
                } catch (e) {
 
                }
