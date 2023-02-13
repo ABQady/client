@@ -33,7 +33,7 @@ function CreateProduct() {
 
       if (fsku == "") {
          missingFlag = true;
-      } else if (!/^[0-9]+$/i.test(fsku)) {
+      } else if (!/^[A-Z0-9._%+-]+$/i.test(fsku)) {
          errorFlag = true;
       }
       if (fname == "") {
