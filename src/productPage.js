@@ -52,6 +52,7 @@ class NavBar extends Component {
                console.log(checkboxes[i].value);
             }
          }
+         document.getElementsById('delete-checkbox').classList.add('d-none');
          window.location.reload();
       }
 
