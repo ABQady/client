@@ -32,6 +32,12 @@ function ProductPage() {
 class NavBar extends Component {
 
    render() {
+      function deleteProduct(sku) {
+         const copy = [...this.products];
+         copy.splice(sku, 1);
+         setProducts(copy);
+      }
+
       //async function deleteAll() {
       const deleteAll = async () => {
 
@@ -52,7 +58,8 @@ class NavBar extends Component {
                         //       products: this.state.products.filter(product => product.SKU !== checkboxes[i].value)
                         //    })
                         // );
-                        .then(this.setProducts(this.state.products.filter(product => product.SKU !== checkboxes[i].value)))
+                        //.then(this.setProducts(this.state.products.filter(product => product.SKU !== checkboxes[i].value)))
+                        .then(deleteProduct(checkboxes[i].value))
                } catch (e) {
 
                }
