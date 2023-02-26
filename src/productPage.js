@@ -58,6 +58,7 @@ function ProductPage() {
       for (const cb of copy) {
          copy.filter(product => product.SKU !== cb.value);
       }
+      console.log(copy);
       setProducts(copy);
       // document.getElementsById("delete-checkbox").classList.add("d-none");
       //window.location.reload();
