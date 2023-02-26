@@ -21,7 +21,7 @@ function ProductPage() {
 
       // for (let i = 0; i < checkboxes.length; i++) {
 
-      const checkboxes = document.querySelectorAll('input[type=checkbox]:checked');
+      const checkboxes = Array.from(document.querySelectorAll('input[type=checkbox]:checked'));
       const copy = Array.from(checkboxes);
 
       for (const cb of checkboxes) {
