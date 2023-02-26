@@ -35,7 +35,7 @@ class NavBar extends Component {
       function deleteProduct(sku) {
          const copy = [...this.products];
          copy.splice(sku, 1);
-         setProducts(copy);
+         this.setProducts(copy);
       }
 
       //async function deleteAll() {
