@@ -17,7 +17,7 @@ function ProductPage() {
    //async function deleteAll() {
    const deleteAll = async () => {
 
-      let checkboxes = document.getElementsByClassName('delete-checkbox');
+      let checkboxes = Array.from(document.getElementsByClassName('delete-checkbox'));
 
       for (var i = 0; i < checkboxes.length; i++) {
          if (checkboxes[i].checked === true) {
