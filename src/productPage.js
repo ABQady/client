@@ -35,16 +35,16 @@ function ProductPage() {
                         console.log(response.status);
                         console.log(response.data);
                      })
-                     //  .then(checkboxes[i].classList.add("d-none"))
-                     // .then(
-                     //    this.setState({
-                     //       products: this.state.products.filter(product => product.SKU !== checkboxes[i].value)
-                     //    })
-                     // );
-                     //.then(this.setProducts(this.state.products.filter(product => product.SKU !== checkboxes[i].value)))
-                     //.then(deleteProduct(checkboxes[i].value))
-                     // .then(setProducts(products.filter(product => product.SKU !== checkboxes[i].value)))
-                     .then(setProducts(products.filter(product => product.SKU !== cb.value)))
+               //  .then(checkboxes[i].classList.add("d-none"))
+               // .then(
+               //    this.setState({
+               //       products: this.state.products.filter(product => product.SKU !== checkboxes[i].value)
+               //    })
+               // );
+               //.then(this.setProducts(this.state.products.filter(product => product.SKU !== checkboxes[i].value)))
+               //.then(deleteProduct(checkboxes[i].value))
+               // .then(setProducts(products.filter(product => product.SKU !== checkboxes[i].value)))
+               //.then(setProducts(products.filter(product => product.SKU !== cb.value)))
             } catch (e) {
 
             }
