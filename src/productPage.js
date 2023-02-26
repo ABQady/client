@@ -60,7 +60,7 @@ class NavBar extends Component {
             }
          }
          // document.getElementsById("delete-checkbox").classList.add("d-none");
-         window.location.reload();
+         //window.location.reload();
       }
 
       return (
