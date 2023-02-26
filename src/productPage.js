@@ -19,7 +19,7 @@ function ProductPage() {
 
       let checkboxes = Array.from(document.getElementsByClassName('delete-checkbox'));
 
-      for (i = 0; i < checkboxes.length; i++) {
+      for (let i = 0; i < checkboxes.length; i++) {
          if (checkboxes[i].checked === true) {
             console.log(checkboxes[i].value);
             try {
