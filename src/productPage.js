@@ -35,7 +35,8 @@ function ProductPage() {
                         console.log(response.status);
                         console.log(response.data);
                      })
-               //  .then(checkboxes[i].classList.add("d-none"))
+                     .then(cb.classList.add("d-none"))
+               //   .then(checkboxes[i].classList.add("d-none"))
                // .then(
                //    this.setState({
                //       products: this.state.products.filter(product => product.SKU !== checkboxes[i].value)
