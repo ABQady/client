@@ -35,7 +35,8 @@ function ProductPage() {
                      //    })
                      // );
                      //.then(this.setProducts(this.state.products.filter(product => product.SKU !== checkboxes[i].value)))
-                     .then(deleteProduct(checkboxes[i].value))
+                     //.then(deleteProduct(checkboxes[i].value))
+                     .then(setProducts(products.filter(product => product.SKU !== checkboxes[i].value)))
             } catch (e) {
 
             }
