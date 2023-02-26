@@ -19,8 +19,9 @@ function ProductPage() {
 
       let checkboxes = Array.from(document.getElementsByClassName('delete-checkbox'));
 
-      for (var i = 0; i < checkboxes.length; i++) {
+      for (i = 0; i < checkboxes.length; i++) {
          if (checkboxes[i].checked === true) {
+            console.log(checkboxes[i].value);
             try {
                await
                   Axios.post('https://server-abqady.vercel.app/delete', { SKU: checkboxes[i].value })
