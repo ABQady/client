@@ -80,7 +80,7 @@ function ProductPage() {
                </div>
                <div className='d-flex justify-content-end col-6 my-auto'>
                   <a href='/add-product' className='btn btn-outline-primary me-3'> ADD</a>
-                  <button onClick={() => { deleteAll(); }} className="btn btn-outline-primary me-3 delete-checkbox"> MASS DELETE</button>
+                  <button onClick={() => { deleteAll(); }} id="delete-product-btn" className="btn btn-outline-primary me-3"> MASS DELETE</button>
                </div>
             </div>
             <div>
