@@ -8,11 +8,11 @@ function ProductPage() {
 
    const [products, setProducts] = useState([]);
 
-   function deleteProduct(sku) {
-      const copy = [...products];
-      copy.splice(sku, 1);
-      setProducts(copy);
-   }
+   // function deleteProduct(sku) {
+   //    const copy = [...products];
+   //    copy.splice(sku, 1);
+   //    setProducts(copy);
+   // }
 
    //async function deleteAll() {
    const deleteAll = async () => {
@@ -22,6 +22,8 @@ function ProductPage() {
       // for (let i = 0; i < checkboxes.length; i++) {
 
       const checkboxes = document.querySelectorAll('input[type=checkbox]:checked');
+      const copy = checkboxes;
+
       for (const cb of checkboxes) {
          //if (checkboxes[i].checked === true) {
          if (cb.checked === true) {
@@ -52,6 +54,9 @@ function ProductPage() {
             // console.log(checkboxes[i].value);
             console.log(cb.value);
          }
+      }
+      for (const cb of copy) {
+         setProducts(products.filter(product => product.SKU !== cb.value));
       }
       // document.getElementsById("delete-checkbox").classList.add("d-none");
       //window.location.reload();
