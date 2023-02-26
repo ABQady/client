@@ -46,12 +46,12 @@ class NavBar extends Component {
                            console.log(response.status);
                            console.log(response.data);
                         })
-                        .then(checkboxes[i].classList.add("d-none"))
-                  // .then(
-                  //    this.setState({
-                  //       products: this.state.products.filter(product => product.SKU !== checkboxes[i].value)
-                  //    })
-                  // );
+                        //  .then(checkboxes[i].classList.add("d-none"))
+                        .then(
+                           this.setState({
+                              products: this.state.products.filter(product => product.SKU !== checkboxes[i].value)
+                           })
+                        );
                   //.then(this.setProducts(this.state.products.filter(product => product.SKU !== checkboxes[i].value)))
                } catch (e) {
 
