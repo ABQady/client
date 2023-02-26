@@ -17,14 +17,20 @@ function ProductPage() {
    //async function deleteAll() {
    const deleteAll = async () => {
 
-      let checkboxes = Array.from(document.getElementsByClassName('delete-checkbox'));
+      // let checkboxes = Array.from(document.getElementsByClassName('delete-checkbox'));
 
-      for (let i = 0; i < checkboxes.length; i++) {
-         if (checkboxes[i].checked === true) {
-            console.log(checkboxes[i].value);
+      // for (let i = 0; i < checkboxes.length; i++) {
+
+      const checkboxes = document.querySelectorAll('input[type=checkbox]:checked');
+      for (const cb of checkboxes) {
+         //if (checkboxes[i].checked === true) {
+         if (cb.checked === true) {
+            //console.log(checkboxes[i].value);
+            console.log(cb.value);
             try {
                await
-                  Axios.post('https://server-abqady.vercel.app/delete', { SKU: checkboxes[i].value })
+                  // Axios.post('https://server-abqady.vercel.app/delete', { SKU: checkboxes[i].value })
+                  Axios.post('https://server-abqady.vercel.app/delete', { SKU: cb.value })
                      .then((response) => {
                         console.log(response.status);
                         console.log(response.data);
@@ -37,11 +43,13 @@ function ProductPage() {
                      // );
                      //.then(this.setProducts(this.state.products.filter(product => product.SKU !== checkboxes[i].value)))
                      //.then(deleteProduct(checkboxes[i].value))
-                     .then(setProducts(products.filter(product => product.SKU !== checkboxes[i].value)))
+                     // .then(setProducts(products.filter(product => product.SKU !== checkboxes[i].value)))
+                     .then(setProducts(products.filter(product => product.SKU !== cb.value)))
             } catch (e) {
 
             }
-            console.log(checkboxes[i].value);
+            // console.log(checkboxes[i].value);
+            console.log(cb.value);
          }
       }
       // document.getElementsById("delete-checkbox").classList.add("d-none");
