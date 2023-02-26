@@ -56,8 +56,9 @@ function ProductPage() {
          }
       }
       for (const cb of copy) {
-         setProducts(products.filter(product => product.SKU !== cb.value));
+         copy.filter(product => product.SKU !== cb.value);
       }
+      setProducts(copy);
       // document.getElementsById("delete-checkbox").classList.add("d-none");
       //window.location.reload();
    }
