@@ -32,7 +32,8 @@ function ProductPage() {
 class NavBar extends Component {
 
    render() {
-      async function deleteAll() {
+      //async function deleteAll() {
+      const deleteAll = async () => {
 
          let checkboxes = document.getElementsByClassName('delete-checkbox');
 
@@ -41,6 +42,10 @@ class NavBar extends Component {
                try {
                   await
                      Axios.post('https://server-abqady.vercel.app/delete', { SKU: checkboxes[i].value })
+                        .then((response) => {
+                           console.log(response.status);
+                           console.log(response.data);
+                        })
                         .then(checkboxes[i].classList.add("d-none"))
                   // .then(
                   //    this.setState({
