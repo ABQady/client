@@ -93,11 +93,12 @@ function CreateProduct() {
    const navigate = useNavigate();
 
    async function addProduct() {
-      var dim = height + "x" + width + "x" + length;
+      const dim = height + "x" + width + "x" + length;
 
       console.log(dim);
       setDimensions(dim);
-      console.log(dimensions)
+      console.log(dimensions);
+
       if (validateForm()) {
          try {
             await Axios.post('https://server-abqady.vercel.app/create', { sku: sku, name: name, price: price, size: size, weight: weight, dimensions: dimensions, type: switcher })
