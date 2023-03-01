@@ -38,7 +38,7 @@ function CreateProduct() {
       }
       if (fname == "") {
          missingFlag = true;
-      } else if (!/^[A-Z0-9._%+-]+$/i.test(fname)) {
+      } else if (!/^[A-Z0-9._%+-\s]+$/i.test(fname)) {
          errorFlag = true;
       }
       if (fprice == "") {
