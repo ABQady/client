@@ -96,7 +96,7 @@ function CreateProduct() {
       const dim = height + "x" + width + "x" + length;
 
       console.log(dim);
-      setDimensions(prev => ([...dim]));
+      // setDimensions(prev => ([...dim]));
       //setDimensions(height + "x" + width + "x" + length);
 
       console.log(dimensions);
@@ -113,10 +113,10 @@ function CreateProduct() {
          }
       }
    }
-   // useEffect(() => {
-   //    const dim = height + "x" + width + "x" + length;
-   //    setDimensions(dim);
-   // }, []);
+   useEffect(() => {
+      const dim = height + "x" + width + "x" + length;
+      setDimensions(dim);
+   }, [height, width, length]);
 
    useEffect(() => {
       if (switcher == 'DVD') {
