@@ -98,7 +98,7 @@ function CreateProduct() {
       console.log(dim);
       // setDimensions(dim);
       //setDimensions(height + "x" + width + "x" + length);
-      useEffect(() => { setDimensions(dim) }, []);
+
       console.log(dimensions);
 
       if (validateForm()) {
@@ -113,7 +113,7 @@ function CreateProduct() {
          }
       }
    }
-
+   useEffect(() => { setDimensions(dim) }, []);
    useEffect(() => {
       if (switcher == 'DVD') {
          document.getElementById("DVD").classList.remove("d-none")
