@@ -43,35 +43,35 @@ function CreateProduct() {
       }
       if (fprice == "") {
          missingFlag = true;
-      } else if (!/^[0-9]+$/i.test(fprice)) {
+      } else if (!/^[0-9.]+$/i.test(fprice)) {
          errorFlag = true;
       }
       if (switcher == 'DVD') {
          if (fsize == "") {
             missingFlag = true;
-         } else if (!/^[0-9]+$/i.test(fsize)) {
+         } else if (!/^[0-9.]+$/i.test(fsize)) {
             errorFlag = true;
          }
       } else if (switcher == 'Book') {
          if (fweight == "") {
             missingFlag = true;
-         } else if (!/^[0-9]+$/i.test(fweight)) {
+         } else if (!/^[0-9.]+$/i.test(fweight)) {
             errorFlag = true;
          }
       } else if (switcher == 'Furniture') {
          if (fheight == "") {
             missingFlag = true;
-         } else if (!/^[0-9]+$/i.test(fheight)) {
+         } else if (!/^[0-9.]+$/i.test(fheight)) {
             errorFlag = true;
          }
          if (fwidth == "") {
             missingFlag = true;
-         } else if (!/^[0-9]+$/i.test(fwidth)) {
+         } else if (!/^[0-9.]+$/i.test(fwidth)) {
             errorFlag = true;
          }
          if (flength == "") {
             missingFlag = true;
-         } else if (!/^[0-9]+$/i.test(flength)) {
+         } else if (!/^[0-9.]+$/i.test(flength)) {
             errorFlag = true;
          }
       }
