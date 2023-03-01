@@ -97,7 +97,8 @@ function CreateProduct() {
 
       console.log(dim);
       // setDimensions(dim);
-      setDimensions(height + "x" + width + "x" + length);
+      //setDimensions(height + "x" + width + "x" + length);
+      useEffect(() => { setDimensions(dim) }, []);
       console.log(dimensions);
 
       if (validateForm()) {
