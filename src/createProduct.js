@@ -16,7 +16,7 @@ function CreateProduct() {
    const [height, setHeight] = useState("0");
    const [width, setWidth] = useState("0");
    const [length, setLength] = useState("0");
-   const [dimensions, setDimensions] = useState("");
+   const [dimensions, setDimensions] = useState("0");
 
    function validateForm() {
       var fsku = document.forms["product_form"]["sku"].value;
