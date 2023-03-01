@@ -113,7 +113,11 @@ function CreateProduct() {
          }
       }
    }
-   useEffect(() => { setDimensions(dim) }, []);
+   useEffect(() => {
+      const dim = height + "x" + width + "x" + length;
+      setDimensions(dim);
+   }, []);
+
    useEffect(() => {
       if (switcher == 'DVD') {
          document.getElementById("DVD").classList.remove("d-none")
