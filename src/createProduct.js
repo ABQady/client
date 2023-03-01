@@ -101,10 +101,11 @@ function CreateProduct() {
       if (validateForm()) {
          try {
             const response = await Axios.post('https://server-abqady.vercel.app/create', { sku: sku, name: name, price: price, size: size, weight: weight, dimensions: dimensions, type: switcher })
+               // .then(
+               //    await timeout(1000))
                .then(
-                  await timeout(1000)).then(
-                     navigate('/', { replace: true })
-                  );
+                  navigate('/', { replace: true })
+               );
          } catch (e) {
             console.log(e);
          }
