@@ -93,14 +93,6 @@ function CreateProduct() {
    const navigate = useNavigate();
 
    async function addProduct() {
-      const dim = height + "x" + width + "x" + length;
-
-      console.log(dim);
-      // setDimensions(prev => ([...dim]));
-      //setDimensions(height + "x" + width + "x" + length);
-
-      console.log(dimensions);
-
       if (validateForm()) {
          try {
             await Axios.post('https://server-abqady.vercel.app/create', { sku: sku, name: name, price: price, size: size, weight: weight, dimensions: dimensions, type: switcher })
@@ -113,6 +105,7 @@ function CreateProduct() {
          }
       }
    }
+
    useEffect(() => {
       const dim = height + "x" + width + "x" + length;
       setDimensions(dim);
