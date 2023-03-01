@@ -96,7 +96,8 @@ function CreateProduct() {
       const dim = height + "x" + width + "x" + length;
 
       console.log(dim);
-      this.setDimensions(dim);
+      // setDimensions(dim);
+      setDimensions(height + "x" + width + "x" + length);
       console.log(dimensions);
 
       if (validateForm()) {
