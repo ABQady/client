@@ -8,12 +8,6 @@ function ProductPage() {
 
    const [products, setProducts] = useState([]);
 
-   // function deleteProduct(sku) {
-   //    const copy = [...products];
-   //    copy.splice(sku, 1);
-   //    setProducts(copy);
-   // }
-
    //async function deleteAll() {
    const deleteAll = async () => {
 
@@ -22,7 +16,7 @@ function ProductPage() {
       // for (let i = 0; i < checkboxes.length; i++) {
 
       const checkboxes = Array.from(document.querySelectorAll('input[type=checkbox]:checked'));
-      const copy = Array.from(checkboxes);
+      // // const copy = Array.from(checkboxes);
 
       for (const cb of checkboxes) {
          //if (checkboxes[i].checked === true) {
@@ -37,7 +31,7 @@ function ProductPage() {
                         console.log(response.status);
                         console.log(response.data);
                      })
-                     .then(cb.classList.add("d-none"))
+               // //  .then(cb.classList.add("d-none"))
                //   .then(checkboxes[i].classList.add("d-none"))
                // .then(
                //    this.setState({
@@ -52,16 +46,16 @@ function ProductPage() {
 
             }
             // console.log(checkboxes[i].value);
-            console.log(cb.value);
+            // // console.log(cb.value);
          }
       }
-      for (const cb of copy) {
-         copy.filter(product => product.SKU !== cb.value);
-      }
-      console.log(copy);
-      setProducts(copy);
+      // // for (const cb of copy) {
+      //    copy.filter(product => product.SKU !== cb.value);
+      // }
+      // // console.log(copy);
+      // // setProducts(copy);
       // document.getElementsById("delete-checkbox").classList.add("d-none");
-      //window.location.reload();
+      window.location.reload();
    }
 
    useEffect(async () => {
